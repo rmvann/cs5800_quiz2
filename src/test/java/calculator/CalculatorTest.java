@@ -5,10 +5,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
     @Test
-    void testSum() {
+    void testSumPositive() {
         Calculator calculator = new Calculator();
         int expected = 5;
         int actual = calculator.sum(2, 3);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testSumNegative() {
+        Calculator calculator = new Calculator();
+        int expected = -1;
+        int actual = calculator.sum(2, -3);
         assertEquals(expected, actual);
     }
 }
