@@ -27,4 +27,12 @@ public class CalculatorTest {
         int actual = calculator.sum(0, 9);
         assertEquals(expected, actual);
     }
+
+    @Test
+    void testSubtractPositive(){
+        Calculator calculator = new Calculator();
+        int expected = 2;
+        int actual = calculator.subtract(8, 6);
+        assertEquals(expected, actual);
+    }
 }
