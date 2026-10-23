@@ -28,4 +28,12 @@ public class DateCheckerTest {
         boolean actual = dateChecker.has31Days(month);
         assertTrue(actual);
     }
+
+    @ParameterizedTest
+    @EnumSource(value=Month.class, names={"APRIL", "JUNE", "SEPTEMBER", "NOVEMBER"})
+    public void testHas31DaysFalse_Parameterized(Month month){
+        DateChecker dateChecker = new DateChecker();
+        boolean actual = dateChecker.has31Days(month);
+        assertFalse(actual);
+    }
 }
