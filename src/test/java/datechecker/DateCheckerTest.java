@@ -10,4 +10,11 @@ public class DateCheckerTest {
         boolean actual = dateChecker.has31Days(Month.JANUARY);
         assertTrue(actual);
     }
+
+    @Test
+    public void testHas31DaysFalse(){
+        DateChecker dateChecker = new DateChecker();
+        boolean actual = dateChecker.has31Days(Month.APRIL);
+        assertFalse(actual);
+    }
 }
