@@ -51,4 +51,28 @@ public class CalculatorTest {
         int actual = calculator.multiply(2,2);
         assertEquals(expected, actual);
     }
+
+    @Test
+    void testMultiplyNegative(){
+        Calculator calculator = new Calculator();
+        int expected = 12;
+        int actual = calculator.multiply(-6,-2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testMultiplyZero(){
+        Calculator calculator = new Calculator();
+        int expected = 0;
+        int actual = calculator.multiply(0,4);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testDividePositive(){
+        Calculator calculator = new Calculator();
+        int expected = 2;
+        int actual = calculator.divide(8,4);
+        assertEquals(expected, actual);
+    }
 }
