@@ -19,4 +19,12 @@ public class CalculatorTest {
         int actual = calculator.sum(2, -3);
         assertEquals(expected, actual);
     }
+
+    @Test
+    void testSumZero() {
+        Calculator calculator = new Calculator();
+        int expected = 9;
+        int actual = calculator.sum(0, 9);
+        assertEquals(expected, actual);
+    }
 }
