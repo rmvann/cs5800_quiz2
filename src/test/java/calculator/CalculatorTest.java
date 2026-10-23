@@ -1,7 +1,8 @@
 package calculator;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
     @Test
@@ -74,5 +75,18 @@ public class CalculatorTest {
         int expected = 2;
         int actual = calculator.divide(8,4);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    void testDivideZero(){
+        Calculator calculator = new Calculator();
+        assertThrows(ArithmeticException.class, () -> calculator.divide(3,0));
+    }
+
+    @Test
+    void testIsEven(){
+        Calculator calculator = new Calculator();
+        boolean actual = calculator.isEven(2);
+        assertTrue(actual);
     }
 }
