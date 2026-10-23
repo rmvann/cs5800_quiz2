@@ -1,7 +1,6 @@
 package calculator;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
@@ -84,9 +83,16 @@ public class CalculatorTest {
     }
 
     @Test
-    void testIsEven(){
+    void testIsEvenTrue(){
         Calculator calculator = new Calculator();
         boolean actual = calculator.isEven(2);
         assertTrue(actual);
+    }
+
+    @Test
+    void testIsEvenFalse(){
+        Calculator calculator = new Calculator();
+        boolean actual = calculator.isEven(3);
+        assertFalse(actual);
     }
 }
