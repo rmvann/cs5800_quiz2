@@ -35,4 +35,20 @@ public class CalculatorTest {
         int actual = calculator.subtract(8, 6);
         assertEquals(expected, actual);
     }
+
+    @Test
+    void testSubtractNegative(){
+        Calculator calculator = new Calculator();
+        int expected = -5;
+        int actual = calculator.subtract(-10,-5);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testMultiplyPositive(){
+        Calculator calculator = new Calculator();
+        int expected = 4;
+        int actual = calculator.multiply(2,2);
+        assertEquals(expected, actual);
+    }
 }
